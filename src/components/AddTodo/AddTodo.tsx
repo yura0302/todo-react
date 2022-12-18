@@ -1,6 +1,14 @@
 import React, { useState } from "react";
+import { Todos } from "../TodoList/TodoList";
+import { addSyntheticLeadingComment } from "typescript";
 
-export default function AddTodo({ onAdd }: any) {
+interface Props {
+  onAdd: (todo: Todos) => void;
+}
+
+// type hello = "bye" | "hi";
+
+export default function AddTodo({ onAdd }: Props) {
   const [text, setText] = useState("");
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setText(e.target.value);
