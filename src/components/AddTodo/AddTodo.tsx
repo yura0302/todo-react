@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Todos } from "../TodoList/TodoList";
+import { v4 as uuid4 } from "uuid";
 
 interface Props {
   onAdd: (todo: Todos) => void;
@@ -16,7 +17,7 @@ export default function AddTodo({ onAdd }: Props) {
     if (text.trim().length === 0) {
       return;
     }
-    onAdd({ id: "고유한값", text, status: "active" });
+    onAdd({ id: uuid4(), text, status: "active" });
     setText("");
   };
 
