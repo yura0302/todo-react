@@ -23,7 +23,7 @@ export default function Todo({ todo, onUpdate, onDelete }: Props) {
         onChange={handleChange}
       />
       <label htmlFor="checkbox">{text}</label>
-      <button>
+      <button onClick={() => onDelete(todo)}>
         <FaTrashAlt />
       </button>
     </li>

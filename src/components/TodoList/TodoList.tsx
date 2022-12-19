@@ -10,7 +10,7 @@ export interface Todos {
 
 /** 이객체 값이 없을 때를 생각해서 undefined 지정 */
 export default function ToDoList() {
-  const [todos, setTodos] = useState<Todos[] | any>([
+  const [todos, setTodos] = useState<Todos[]>([
     { id: "123", text: "장보기", status: "active" },
     { id: "124", text: "공부하기", status: "active" },
   ]);
